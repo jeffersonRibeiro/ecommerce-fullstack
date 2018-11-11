@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "setup": "babel-node env-setup",
     "start": "nodemon app --exec babel-node",
     "start:prd": "node app"
   },
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/jeffersonRibeiro/ecommerce-mpa#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",

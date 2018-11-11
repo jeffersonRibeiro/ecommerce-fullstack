@@ -1,9 +1,20 @@
+import dotenv from 'dotenv';
 import express from 'express';
 
-const app = express();
+import routes from './routes';
 
-app.use('/', (req, res) => {
-  res.send('dsa');
+dotenv.config();
+const app = express();
+app.set('view engine', 'hbs');
+app.set('views', 'app/views');
+
+
+app.use('/', routes.home);
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Ecommerce MPA is listening on port ${port}`);
 })
 
-app.listen(3000);
+export default app;
