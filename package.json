@@ -1,0 +1,30 @@
+{
+  "name": "ecommerce-mpa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app --exec babel-node",
+    "start:prd": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonRibeiro/ecommerce-mpa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersonRibeiro/ecommerce-mpa/issues"
+  },
+  "homepage": "https://github.com/jeffersonRibeiro/ecommerce-mpa#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.6"
+  }
+}
