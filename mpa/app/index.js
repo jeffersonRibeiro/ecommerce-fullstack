@@ -8,8 +8,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', 'app/views');
 
-
-app.use('/', routes.home);
+app.use(routes);
 
 const port = process.env.PORT || 3000;
 

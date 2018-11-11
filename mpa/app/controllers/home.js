@@ -1,9 +1,6 @@
-const requestData = () => {
-  return {
-    hello: 'Yeah!'
-  }
-}
-
-export {
-  requestData
-}
+export default (req, res) => {
+  console.log('dasd');
+  res.render('home', {
+    hello: ':P'
+  });
+} 

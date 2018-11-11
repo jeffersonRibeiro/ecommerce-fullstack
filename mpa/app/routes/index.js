@@ -1,9 +1,12 @@
-import {requestData} from '../controllers/home';
+import express from 'express';
 
-const home = (req, res) => {
-  res.render('home', requestData());
-}
+import homeController from '../controllers/home';
+import { notFoundController } from '../controllers/misc';
 
-export default {
-  home,
-}
+const router = express.Router();
+
+router.get('/', homeController);
+router.use(notFoundController);
+
+
+export default router
