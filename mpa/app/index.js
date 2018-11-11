@@ -1,12 +1,17 @@
+import path from 'path';
+
 import dotenv from 'dotenv';
 import express from 'express';
+import hbs from 'hbs';
 
 import routes from './routes';
 
 dotenv.config();
+
 const app = express();
 app.set('view engine', 'hbs');
 app.set('views', 'app/views');
+hbs.registerPartials(path.join(__dirname, 'views', 'partials'));
 
 app.use(routes);
 
